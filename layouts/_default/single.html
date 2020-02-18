@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>{{ .Title }}</h2>
+                    <div class="portfolio-meta">
+                        <span>
+                            <time class="post-date dt-published" datetime="{{ .Date }}">{{ .Date.Day }} {{ index $.Site.Data.mois (printf "%d" .Date.Month) }} {{ .Date.Year }}</time>
+                        </span>|
+                        {{ if ne .Params.tags nil }}
+                        <span>
+                         Tags:
+                            {{ range .Params.tags }}
+                                <a class="tags" href="/tags/{{ . }}">{{ . }}</a>
+                            {{ end }}
+                        </span>|
+                        {{ end }}
+                        {{ if ne .Params.categories nil }}
+                        <span>
+                         Catégories:
+                            {{ range .Params.categories }}
+                                <a class="tags" href="/categories/{{ . }}">{{ . }}</a>
+                            {{ end }}
+                        </span>|
+                        {{ end }}
+                        <span> Auteur:
+                            {{ .Params.author }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="single-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {{ with .Params.image }}
+                <div class="post-img">
+                    <img class="img-fluid" alt="" src="{{ . | absURL }}">
+                </div>
+                {{ end }}
+                <div class="post-content">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

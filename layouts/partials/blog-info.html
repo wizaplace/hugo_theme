@@ -1,0 +1,35 @@
+
+{{ "<!-- Portfolio Section Start -->" | safeHTML }}
+<section id="works" class="works">
+    <div class="container">
+            <div class="section-heading">
+                {{ with .Site.Params.blog }}<h1 class="title wow fadeInDown" data-wow-delay=".3s">{{ .title }}</h1>{{ end }}
+            </div>
+            <div class="row">
+                {{ range first .Site.Params.blog.nbArticles ($element:= where .Site.RegularPages "Type" "post") }}
+                <div class="col-md-4 col-sm-6">
+                    <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <div class="img-wrapper">
+                            <img src="{{ .Params.Image | relURL }}" class="img-fluid" alt="this is a title">
+                            <div class="overlay">
+
+                            </div>
+                        </div>
+                        <figcaption>
+                            <h4>
+                                <a href="{{ .Permalink }}">
+                                    {{ .Title }}
+                                </a>
+                            </h4>
+                            <p>
+                                {{ .Summary }}
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ "<!-- Portfolio Section End -->" | safeHTML }}

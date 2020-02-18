@@ -1,0 +1,20 @@
+<section id="blog-full-width-tags"  class="works">
+    <div class="container">
+        <div class="section-heading">
+            <h1 class="title wow fadeInDown" data-wow-delay=".3s">Liste des catégories</h1>
+        </div>
+        <div class="row">
+            {{ range .Site.Taxonomies.categories }}
+            <div class="col-md-2">
+                <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
+                    <div class="blog-content">
+                        <a href="{{ .Page.Permalink }}" class="btn-demo-tags">{{ .Page.Title }} ({{ .Count }})</a>
+                    </div>
+                </article>
+            </div>
+            {{ end }}
+
+        </div>
+    </div>
+</section>
+
