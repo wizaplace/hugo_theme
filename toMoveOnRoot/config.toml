@@ -51,12 +51,12 @@ nbArticles= 3
 # social icon
 [[params.socialIcon]]
 icon = "ion-social-twitter"
-url = "#"
+url = "https://twitter.com/WizaTech"
 
 [[params.socialIcon]]
-icon = "ion-social-instagram"
-url = "#"
+icon = "ion-social-facebook"
+url = "https://www.facebook.com/wizaplace/"
 
 [[params.socialIcon]]
 icon = "ion-social-linkedin"
-url = "#"
+url = "https://www.linkedin.com/company/wizaplace"
