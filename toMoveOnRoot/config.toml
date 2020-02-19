@@ -1,7 +1,3 @@
-baseURL = "https://fabien-prudhomme.github.io/"
-languageCode = "fr-fr"
-title = "wiza-tech"
-theme = "hugo_theme"
 
 [taxonomies]
   category = "categories"
