@@ -56,3 +56,15 @@ url = "https://www.facebook.com/wizaplace/"
 [[params.socialIcon]]
 icon = "ion-social-linkedin"
 url = "https://www.linkedin.com/company/wizaplace"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "manni"
+    tabWidth = 4

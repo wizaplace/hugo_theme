@@ -12,21 +12,21 @@
                         </span>|
                         {{ if ne .Params.tags nil }}
                         <span>
-                         Tags:
-                            {{ range .Params.tags }}
+                         Tags :
+                            {{ range sort .Params.tags }}
                                 <a class="tags" href="/tags/{{ . }}">{{ . }}</a>
                             {{ end }}
                         </span>|
                         {{ end }}
                         {{ if ne .Params.categories nil }}
                         <span>
-                         Catégories:
-                            {{ range .Params.categories }}
+                         Catégories :
+                            {{ range sort .Params.categories }}
                                 <a class="tags" href="/categories/{{ . }}">{{ . }}</a>
                             {{ end }}
                         </span>|
                         {{ end }}
-                        <span> Auteur:
+                        <span> Auteur :
                             {{ .Params.author }}
                         </span>
                     </div>
